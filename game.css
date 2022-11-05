@@ -1,0 +1,28 @@
+body {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.game-cover {
+    background: url("./assets/numeron-bg_mm5r8c.png") no-repeat;
+    background-size: cover;
+}
+
+.flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#game-over-text {
+    width: 50%;
+    max-width: 500px;
+}
+
+#score-box {
+    font-size: 6vw;
+    border: 1px solid white;
+    padding: 2vw;
+}

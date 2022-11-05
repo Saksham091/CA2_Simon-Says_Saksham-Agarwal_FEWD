@@ -1,0 +1,125 @@
+body{
+    background: url(./assets/Final.png);
+    font-family: 'Righteous', cursive;
+    color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height:100vh;
+    overflow: hidden;
+}
+
+.main{
+    width: 500px;
+}
+
+.start{
+    display: flexbox;
+    width: 95vw;
+    justify-content: center;
+}
+
+.start h1{
+    font-size: 50px;
+    color: white;
+}
+
+.start button{
+    background:transparent;
+    border: none;
+    margin: auto;
+    width: 100vw;
+    text-align: center;
+}
+
+.level{
+    display: flex;
+}
+
+#noob{
+    margin-left: 150px;
+    margin-top: 80px;
+}
+
+#noob h1{
+    font-size: 50px;
+    color: white;
+}
+
+#noob button{
+    background:transparent;
+    border: none;
+}
+
+#intermediate{
+    position: absolute;
+    right: 100px;
+    margin-top: 80px;
+}
+
+#intermediate h1{
+    font-size: 50px;
+    color: white;
+}
+
+#intermediate button{
+    background:transparent;
+    border: none;
+}
+
+.bottom{
+    display: flex;
+}
+
+#pro{
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+#pro h1{
+    font-size: 50px;
+    color: white;
+}
+
+#pro button{
+    background:transparent;
+    border: none;
+}
+
+#instruction{
+    position: absolute;
+    right: 120px;
+    margin-top: 40px;
+}
+
+#instruction h1{
+    font-size: 50px;
+    color: white;
+}
+
+#instruction button{
+    background:transparent;
+    border: none;
+}
+
+.in{
+    background-color: rgba(255, 255, 255, 0.796);
+    height: 710px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid red;
+}
+
+.in h1{
+    text-align: center;
+}
+
+.in p{
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.in ul{
+    margin-left: 40px;
+    font-size: 20px;
+}
