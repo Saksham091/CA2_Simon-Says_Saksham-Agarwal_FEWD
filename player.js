@@ -3,5 +3,10 @@ const user = document.getElementById("user");
 
 play.onclick=()=>{
     localStorage.setItem("Player Name",user.value)
-    window.location.href="game.html";
+    if(user.value==""){
+        alert("Pls Fill you Name")
+    }
+    else{
+        window.location.href="game.html";
+    }
 }
