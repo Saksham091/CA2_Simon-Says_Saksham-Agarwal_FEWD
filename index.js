@@ -9,7 +9,7 @@ let noise = true;
 let on = false;
 let win;
 let time = 72;
-let score=0;
+let score = 0;
 
 const turnCounter = document.querySelector("#turn");
 const timeCounter = document.querySelector("#time");
@@ -19,18 +19,18 @@ const bottomLeft = document.querySelector("#bottomleft");
 const bottomRight = document.querySelector("#bottomright");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
-const count = document.getElementById("score")
-const name=document.getElementById("player")
+const count = document.getElementById("score");
+const name = document.getElementById("player")
 
-name.innerHTML="Player: "+localStorage.getItem("Player Name")
+name.innerHTML="Player: "+localStorage.getItem("Player Name");
 
 // Start The Game
 function save(){
-    on = true;
-    turnCounter.innerHTML = "-";
-}  
+  on = true;
+  turnCounter.innerHTML = "-";
+}
 
-// Setting Time
+//  Setting Time
 startButton.addEventListener('click', (event) => {
   if (on || win) {
     play();
@@ -48,7 +48,7 @@ startButton.addEventListener('click', (event) => {
   }
 });
 
-//Working of the game 
+// Working of the game
 function play() {
   win = false;
   order = [];
@@ -89,7 +89,7 @@ function gameTurn() {
   }
 }
 
-// working of audio
+// Working of audio
 function one() {
   if (noise) {
     let audio = document.getElementById("clip1");
@@ -194,7 +194,7 @@ bottomRight.addEventListener('click', (event) => {
   }
 })
 
-// function to check the code
+// Function to check the code
 function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
     good = false;
@@ -203,7 +203,7 @@ function check() {
     winGame();
   }
 
-  // if player loose
+  // If player loose
   if (good == false) {
     flashColor();
     turnCounter.innerHTML = "NO!";
@@ -218,7 +218,8 @@ function check() {
     noise = false;
   }
 
-  // if the player is correct
+  // If the player is correct
+
   if (turn == playerOrder.length && good && !win) {
     score+=10;
     turn++;
@@ -226,13 +227,12 @@ function check() {
     compTurn = true;
     flash = 0;
     turnCounter.innerHTML = turn;
-    intervalId = setInterval(gameTurn, 620);
+    intervalId = setInterval(gameTurn, 800);
   }
   count.innerHTML = score;
-  localStorage.setItem("score")
 }
 
-// the player has won
+// The player has won
 function winGame() {
   flashColor();
   turnCounter.innerHTML = "WIN!";
